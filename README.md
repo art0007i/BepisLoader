@@ -4,7 +4,7 @@ App which allows using BepInEx with Resonite.
 
 ## Installation
 
-1. Download [BepisLoader-full.zip](https://github.com/art0007i/BepisLoader/releases/latest/BepisLoader-full.zip).
+1. Download [BepisLoader-full.zip](https://github.com/art0007i/BepisLoader/releases/latest/download/BepisLoader-full.zip).
 2. Extract it over the resonite folder
 3. Launch BepisLoader.exe (should be in the same folder as Resonite.exe)
 
