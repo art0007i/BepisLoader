@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include=".\Hardware.Info\Hardware.Info.csproj" />
+  </ItemGroup>
+	
+	<ItemGroup>
+		<Reference Include="BepInEx.NET.CoreCLR">
+			<HintPath>E:\Programs\Steam\steamapps\common\Resonite\BepInEx.NET.CoreCLR.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>

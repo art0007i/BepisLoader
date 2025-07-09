@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BepisLoader": {
+      "commandName": "Project",
+      "workingDirectory": "E:\\Programs\\Steam\\steamapps\\common\\Resonite"
+    }
+  }
+}
