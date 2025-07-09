@@ -1,0 +1,3 @@
+[submodule "Hardware.Info"]
+	path = Hardware.Info
+	url = https://github.com/art0007i/Hardware.Info

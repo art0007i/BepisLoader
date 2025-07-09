@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BepisLoader", "BepisLoader.csproj", "{73EB480D-C7A8-4A95-B4AE-818E72AAA4DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hardware.Info", "Hardware.Info\Hardware.Info\Hardware.Info.csproj", "{E1E0900D-EFD1-1A95-2D7B-1107FA1178F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{73EB480D-C7A8-4A95-B4AE-818E72AAA4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73EB480D-C7A8-4A95-B4AE-818E72AAA4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73EB480D-C7A8-4A95-B4AE-818E72AAA4DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E0900D-EFD1-1A95-2D7B-1107FA1178F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E0900D-EFD1-1A95-2D7B-1107FA1178F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E0900D-EFD1-1A95-2D7B-1107FA1178F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E0900D-EFD1-1A95-2D7B-1107FA1178F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
