@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+		<Version>1.1.0</Version>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net9.0-windows</TargetFramework>
 		<UseWindowsForms>true</UseWindowsForms>
@@ -13,15 +14,9 @@
     <EmbeddedResource Remove="Hardware.Info\**" />
     <None Remove="Hardware.Info\**" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="Hardware.Info\Hardware.Info\Hardware.Info.csproj" />
-  </ItemGroup>
 	
+	<!-- For some reason if I don't reference this project everything crashes -->
 	<ItemGroup>
-		<Reference Include="BepInEx.NET.CoreCLR">
-			<HintPath>E:\Programs\Steam\steamapps\common\Resonite\BepInEx.NET.CoreCLR.dll</HintPath>
-		</Reference>
+		<ProjectReference Include="Hardware.Info\Hardware.Info\Hardware.Info.csproj" />
 	</ItemGroup>
-
 </Project>

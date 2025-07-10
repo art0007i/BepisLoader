@@ -2,6 +2,7 @@
   "profiles": {
     "BepisLoader": {
       "commandName": "Project",
+      "commandLineArgs": "-data \"D:\\YDMS\\Resonite Data\" -cache \"D:\\YDMS\\Resonite Cache\" -Screen -Invisible -LoadAssembly \"Libraries/ResoniteModLoader.dll\" -DoNotAutoLoadHome",
       "workingDirectory": "E:\\Programs\\Steam\\steamapps\\common\\Resonite"
     }
   }
