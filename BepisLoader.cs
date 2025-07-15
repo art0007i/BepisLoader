@@ -49,6 +49,11 @@ public class BepisLoader
     {
         var assemblyName = new AssemblyName(args.Name);
 
+        return ResolveInternal(assemblyName);
+    }
+
+    static Assembly? ResolveInternal(AssemblyName assemblyName)
+    {
         var found = AppDomain.CurrentDomain.GetAssemblies().FirstOrDefault(x => x.GetName().Name == assemblyName.Name);
         if (found != null)
         {
@@ -71,21 +76,7 @@ public class BepisLoader
     {
         protected override Assembly? Load(AssemblyName assemblyName)
         {
-            var found = AppDomain.CurrentDomain.GetAssemblies().FirstOrDefault(x => x.GetName().Name == assemblyName.Name);
-            if (found != null)
-            {
-                return found;
-            }
-
-            if (assemblyName.Name == "System.Management") return null;
-
-            var targetPath = Path.Combine(resoDir, assemblyName.Name + ".dll");
-            if (File.Exists(targetPath))
-            {
-                var asm = LoadFromAssemblyPath(targetPath);
-                return asm;
-            }
-            return null;
+            return ResolveInternal(assemblyName);
         }
 
         protected override IntPtr LoadUnmanagedDll(string unmanagedDllName)
