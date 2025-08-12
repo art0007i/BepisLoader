@@ -22,7 +22,7 @@ public class BepisLoader
 
         var asm = alc.LoadFromAssemblyPath(Path.Combine(resoDir, "BepInEx", "core", "BepInEx.NET.CoreCLR.dll"));
 
-        var resoDllPath = Path.Combine(resoDir, "Resonite.dll");
+        var resoDllPath = Path.Combine(resoDir, "Renderite.Host.dll");
 
         var t = asm.GetType("StartupHook");
         var m = t.GetMethod("Initialize", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(AssemblyLoadContext)]);
@@ -32,7 +32,7 @@ public class BepisLoader
         var resoAsm = AppDomain.CurrentDomain.GetAssemblies().FirstOrDefault(x => x.GetName().Name == "Resonite");
         if (resoAsm == null)
         {
-            resoAsm = alc.LoadFromAssemblyPath(Path.Combine(resoDir, "Resonite.dll"));
+            resoAsm = alc.LoadFromAssemblyPath(Path.Combine(resoDir, "Renderite.Host.dll"));
         }
         try
         {
