@@ -13,7 +13,16 @@ App which allows using BepInEx with Resonite.
 
 ## Uninstallation
 
-1. Remove dotnet.exe (this is our entry point on windows)
-2. Remove Bepis* files
-3. Remove BepInEx folder
-4. (On linux) Change Resonite.sh to launch `Resonite.dll` instead of `BepisLoader.dll`
+1. Remove hostfxr.dll (this is our entry point on windows)
+2. Remove hostfxr.pdb
+3. Remove hookfxr.ini
+4. Remove Bepis* files
+5. Remove BepInEx folder
+6. (On linux) Change Resonite.sh to launch `Resonite.dll` instead of `BepisLoader.dll`
+
+## References
+
+BepisLoader makes use of these repos and packages them inside the [BepisLoader-full.zip](https://github.com/art0007i/BepisLoader/releases/latest/download/BepisLoader-full.zip)
+- [BepInEx net9 Fork](https://github.com/art0007i/BepInEx)
+- [BepInEx Resonite Shim](https://github.com/art0007i/BepInExResoniteShim)
+- [hookfxr](https://github.com/MonkeyModdingTroop/hookfxr)
