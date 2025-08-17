@@ -8,7 +8,7 @@ App which allows using BepInEx with Resonite.
 2. Extract it over the resonite folder
 3. Download [RML pre-release](https://github.com/resonite-modding-group/ResoniteModLoader/releases)
 4. Add it to your launch arguments `-LoadAssembly ResoniteModLoader.dll`
-5. (On linux) Change Resonite.sh to launch `BepisLoader.dll` instead of `Resonite.dll`
+5. (On linux) Change LinuxBootstrap.sh to launch `BepisLoader.dll` instead of `Resonite.dll`
 6. Launch Resonite.exe
 
 ## Uninstallation
@@ -18,7 +18,7 @@ App which allows using BepInEx with Resonite.
 3. Remove hookfxr.ini
 4. Remove Bepis* files
 5. Remove BepInEx folder
-6. (On linux) Change Resonite.sh to launch `Resonite.dll` instead of `BepisLoader.dll`
+6. (On linux) Change LinuxBootstrap.sh to launch `Resonite.dll` instead of `BepisLoader.dll`
 
 ## References
 
