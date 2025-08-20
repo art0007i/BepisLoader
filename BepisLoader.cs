@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Runtime.Loader;
 
@@ -11,7 +11,7 @@ public class BepisLoader
     static void Main(string[] args)
     {
 #if DEBUG
-        File.WriteAllText("Assemblies.log", "BepisLoader started\n");
+        File.WriteAllText("BepisLoader.log", "BepisLoader started\n");
 #endif
         resoDir = Directory.GetCurrentDirectory();
 
@@ -83,13 +83,26 @@ public class BepisLoader
         {
             var rid = RuntimeInformation.RuntimeIdentifier;
             var nativeLibs = Path.Join(resoDir, "runtimes", rid, "native");
-            var potential = Path.Combine(nativeLibs, GetUnmanagedLibraryName(unmanagedDllName));
-            if (File.Exists(potential))
-            {
-                return LoadUnmanagedDllFromPath(potential);
+            IEnumerable<string> potentialPaths = [unmanagedDllName, Path.Combine(nativeLibs, GetUnmanagedLibraryName(unmanagedDllName))];
+            if (unmanagedDllName.EndsWith("steam_api64.so")) potentialPaths = ((IEnumerable<string>)["libsteam_api.so"]).Concat(potentialPaths);
+
+            Log("NativeLib " + unmanagedDllName);
+            foreach (var path in potentialPaths) {
+                Log("  Testing: " + path);
+                if (File.Exists(path)) {
+                    Log("  Exists! " + path);
+                    var dll = LoadUnmanagedDllFromPath(path);
+                    if (dll != IntPtr.Zero) {
+                        Log("  Loaded! " + path);
+                        return dll;
+                    }
+                }
             }
+
             return IntPtr.Zero;
         }
+
+
 
         private static string GetUnmanagedLibraryName(string name)
         {
@@ -112,7 +125,7 @@ public class BepisLoader
 #if DEBUG
         lock(_lock)
         {
-            File.AppendAllLines("Assemblies.log", [message]);
+            File.AppendAllLines("BepisLoader.log", [message]);
         }
 #endif
     }
