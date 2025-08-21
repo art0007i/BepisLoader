@@ -1,3 +1,5 @@
+# Arhived because repo has been moved to [ResoniteModding/BepisLoader](https://github.com/ResoniteModding/BepisLoader/)
+
 # BepisLoader
 
 App which allows using BepInEx with Resonite.
